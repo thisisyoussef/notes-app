@@ -1,82 +1,107 @@
 # Notes App
 
+A simple, yet efficient, command line application that manages user's notes. The Notes App is built using Node.js, and allows you to create, read, update, and delete personal notes in a convenient and fast manner.
+
 ## Project Overview
 
-The Notes App is a command-line application that allows users to manage notes in a simple and efficient way. Users can add, remove, list, and read individual notes with ease. The app is built using Node.js and utilizes npm packages such as yargs for command-line parsing and argument handling, and chalk for console styling.
+This project includes the following main files:
+
+- `app.js`: The main file that contains the core logic of the application.
+- `notes.js`: A module that handles note-related operations such as adding, removing, and listing notes.
+- `notes.json`: A JSON file that is used for storing notes data.
+- `utils.js`: A utility file for additional functions that might be needed.
+- `package.json` and `package-lock.json`: These files include the project's dependencies information and other relevant information.
+- `task-manager`: A directory containing task manager project files (currently under development).
 
 ## Installation Instructions
 
-Before running the Notes App, make sure you have Node.js and npm installed on your system. If you don't, you can download them [here](https://nodejs.org/en/download/).
+1. You need to have Node.js installed on your machine. You can download Node.js [here](https://nodejs.org/en/download/).
 
-Clone the repository using the following command:
+2. Clone the repository:
 
-```sh
+```bash
 git clone https://github.com/thisisyoussef/notes-app.git
 ```
 
-Navigate to the project folder and install the necessary npm packages:
+3. Change to the directory:
 
-```sh
+```bash
 cd notes-app
+```
+
+4. Install required dependencies:
+
+```bash
 npm install
 ```
 
 ## Usage Guide
 
-The Notes App uses the command-line interface to manage notes. Here are the commands and their respective functionality:
+To use the Notes App, execute the following command in the terminal:
 
-* Add a note:
-
-```sh
-node app.js add --title="Your title" --body="Your note content"
+```bash
+node app.js <command> [options]
 ```
 
-* Remove a note:
+Here, `<command>` can be one of the following:
 
-```sh
-node app.js remove --title="Your title"
+- `add`: Add a new note.
+- `remove`: Remove a note.
+- `list`: List all notes.
+- `read`: Read a specific note.
+
+The `[options]` depends on the command you are using:
+
+### Add a note
+
+```bash
+node app.js add --title="Note Title" --body="Note Body"
 ```
 
-* List all notes:
+### Remove a note
 
-```sh
+```bash
+node app.js remove --title="Note Title"
+```
+
+### List all notes
+
+```bash
 node app.js list
 ```
 
-* Read a specific note:
+### Read a specific note
 
-```sh
-node app.js read --title="Your title"
+```bash
+node app.js read --title="Note Title"
 ```
 
 ## Features and Functionality
 
-The Notes App provides the following features to users:
-
-* Efficient and simple management of notes in a command-line environment
-* Easy commands and arguments for clear and quick note handling
-* Stylish console output and feedback using the chalk npm package
-* Persistent storage of notes in a JSON file for convenient access
+- Create, read, update, and delete notes (CRUD operations).
+- JSON file for data storage, ensuring both speed and flexibility.
+- Easy-to-use command line interface.
+- Efficient and lightweight, built using Node.js.
 
 ## Contributing Guidelines
 
-We welcome contributions from the community! Please review our [Contributing Guide](CONTRIBUTING.md) for information on how to contribute, our code of conduct, and the process for submitting pull requests.
+We welcome contributions from the community! If you'd like to contribute to the project, please follow the general guidelines below:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit and push your changes.
+4. Create a pull request.
+
+For more detailed guidelines, please refer to our [contributing guidelines](CONTRIBUTING.md).
 
 ## License Information
 
-The Notes App is licensed under the MIT License. For more information, please see the [License file](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ## Contact Information
 
-If you have any questions or concerns, feel free to reach out to the repository owner at [thisisyoussef](https://github.com/thisisyoussef). We would be happy to help you with any issues you may have.
+If you have any questions or suggestions, please feel free to reach out to the repository owner:
 
-## Technologies and Tools
+- [This is Youssef](https://github.com/thisisyoussef)
 
-The Notes App utilizes the following technologies and tools:
-
-* [Node.js](https://nodejs.org/en/): A JavaScript runtime built on Chrome's V8 JavaScript engine, used for executing JavaScript code server-side.
-* [npm](https://www.npmjs.com/): A package manager for JavaScript and the world’s largest software registry, used for managing the project's dependencies.
-* [yargs](https://www.npmjs.com/package/yargs): A command-line parser that provides a simple way to add command and argument handling to your CLI applications.
-* [chalk](https://www.npmjs.com/package/chalk): A library for styling terminal strings, which adds colors and style to the console output making it more user-friendly.
-
-These technologies and tools were chosen to provide a smooth, efficient, and user-friendly experience for developers and users alike. They contribute to the project's functionality, performance, and overall success by enabling the creation of a lightweight yet robust command-line application for managing notes.
+Please also feel free to open an issue in the GitHub repository if you encounter any problems or have feature requests.
